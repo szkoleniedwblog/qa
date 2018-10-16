@@ -1,3 +1,5 @@
+package pl.testowy;
+
 public class GamePlay {
     public static String play(int number) {
         if (number == 0) throw new IllegalArgumentException("Number must not be 0");
