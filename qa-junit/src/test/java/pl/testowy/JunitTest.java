@@ -1,4 +1,5 @@
-import org.junit.After;
+package pl.testowy;
+
 import org.junit.jupiter.api.*;
 
 import java.math.BigDecimal;

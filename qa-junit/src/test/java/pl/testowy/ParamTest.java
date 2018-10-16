@@ -1,3 +1,5 @@
+package pl.testowy;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -21,7 +23,7 @@ public  class ParamTest {
 
     @ParameterizedTest
     @DisplayName("Second Parameterized test")
-    @ValueSource(strings = {"Hello", "World", "Cos"})
+    @ValueSource(strings = {"Hello", "HelloWorld", "HelloCos"})
     public void parameterizedTest2(String text) {
         assertTrue( text.contains("Hello"));
     }
