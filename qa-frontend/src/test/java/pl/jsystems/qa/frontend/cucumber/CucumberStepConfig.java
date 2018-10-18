@@ -1,13 +1,9 @@
-package pl.jsystems.qa.frontend;
+package pl.jsystems.qa.frontend.cucumber;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +23,7 @@ public class CucumberStepConfig {
     private StringBuffer verificationErrors = new StringBuffer();
     public String id = "0";
 
-    @Before
+
     public WebDriver setUp() {
         WebDriverManager.chromedriver().setup();
         System.out.println("================== @Before Frontend Cucumber =====================");
@@ -67,10 +63,10 @@ public class CucumberStepConfig {
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
             fail(verificationErrorString);
+           // driver.close();
+        }
             driver.quit();
             driver = null;
-            driver.close();
-        }
     }
 
 }
